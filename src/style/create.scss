@@ -1,0 +1,28 @@
+@import "variables";
+
+.create-box{
+  h1{
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  border-radius: 5px;
+  margin: 5%;
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 2%;
+  height: 70%;
+  .create-event-button{
+    margin-top: 20px;
+    min-width: 50%;
+    position: relative;
+    bottom: 2px;
+
+  }
+
+  .calendar {
+    margin-top: 40px;
+  }
+}

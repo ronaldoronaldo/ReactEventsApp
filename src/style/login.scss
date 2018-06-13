@@ -1,0 +1,79 @@
+@import "variables";
+
+
+.login-box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 40;
+  .login-title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: $black-text;
+  }
+  .login-button{
+    min-width: 50%;
+    margin-top: 20px;
+  }
+}
+
+.login-label{
+  color: #6c757d;
+  position: relative;
+  top: -30px;
+}
+
+.login-form{
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  left: 25%;
+  top: 10%;
+}
+
+
+
+.sign-link{
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  color: #757575;
+  .highlight{
+    font-weight: bold;
+    color: #757575;
+  }
+}
+
+
+.darkback{
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("img/e039b21e9dd9aa71bd91498f334ce2370945b616.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.han-solo{
+  position: fixed;
+  bottom: 6%;
+  left: 4%;
+  width: 25%;
+  text-align: center;
+  color: white;
+  .separator-middle{
+    width: 15%;
+    position: relative;
+    left: 42%;
+    border-bottom: 4px solid #28a745;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}

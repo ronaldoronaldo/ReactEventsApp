@@ -1,0 +1,22 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Hind|Playfair+Display');
+
+
+body{
+  background-color: $background-color;
+  font-family: 'Playfair Display', serif;
+  color: #aaaaaa;
+}
+
+h1 h2 h3{
+  font-family: 'Hind', sans-serif;
+}
+
+button{
+  min-width: 42px;
+}
+
+.centralize{
+  text-align: center;
+}
+

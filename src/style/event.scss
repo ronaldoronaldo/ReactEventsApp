@@ -1,0 +1,28 @@
+@import "variables";
+
+.event-container{
+  padding: 50px;
+  .update-event-button{
+    margin-top: 30px;
+    min-width: 55%;
+    position: relative;
+  }
+  .delete-event-button{
+    margin-top: 30px;
+    min-width: 35%;
+    position: relative;
+    float: right;
+  }
+  .attendees-box{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .attendees{
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+  }
+  .attendees-title{
+    color: #c3c3c3 !important;
+  }
+}
