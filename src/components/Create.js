@@ -75,6 +75,15 @@ class Create extends Component {
             this.setState({created: false});
             return <Redirect to='/'/>
         }
+        let calendarWidth, calendarHeigh = 0;
+        if (window.innerWidth > 700){
+            calendarWidth = 400;
+            calendarHeigh = 230;
+        }
+        else{
+          calendarWidth = 295;
+          calendarHeigh = 250;
+        }
         return (
             <div className="container-fluid">
                 <div className="create-box">
@@ -114,8 +123,8 @@ class Create extends Component {
                         </div>
                         <div className="calendar col-md-6 sol-sm-12">
                             <InfiniteCalendar
-                                width={300}
-                                height={300}
+                                width={calendarWidth}
+                                height={calendarHeigh}
                                 selected={null}
                                 disabledDays={[0,6]}
                                 minDate={today}
