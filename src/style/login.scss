@@ -21,6 +21,26 @@
   }
 }
 
+.login-box-mobile{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 40;
+  .login-title {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: $black-text;
+  }
+  .login-button{
+    min-width: 50%;
+    margin-top: 20px;
+  }
+}
+
 .login-label{
   color: #6c757d;
   position: relative;
@@ -51,10 +71,10 @@
 
 
 .darkback{
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("img/e039b21e9dd9aa71bd91498f334ce2370945b616.png") no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/e039b21e9dd9aa71bd91498f334ce2370945b616.png") no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  width: 35%;
+  width: 50%;
   height: 100%;
   top: 0;
   left: 0;
