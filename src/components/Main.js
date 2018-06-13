@@ -20,10 +20,15 @@ class Main extends Component {
                                                              handleLogged={this.props.handleLogged}
                                                              logged={this.props.logged}
                                                              callAllEvents={this.props.callAllEvents}
+                                                             mobileScreen={this.props.mobileScreen}
                     />}/>
-                    <Route path='/sign' render={()=><SignUp/>}/>
+                    <Route path='/sign' render={()=><SignUp  mobileScreen={this.props.mobileScreen}
+                    
+                    />}/>
                     <Route path='/create' render={()=><Create auth = {this.props.auth}
                                                               callAllEvents={this.props.callAllEvents}
+                                                              mobileScreen={this.props.mobileScreen}
+
                     />}/>
                     <Route path='/user' render={()=><User user = {this.props.user}
                                                           auth = {this.props.auth}
@@ -31,6 +36,7 @@ class Main extends Component {
                                                           setUserEvents={this.props.setUserEvents}
                                                           callAllEvents={this.props.callAllEvents}
                                                           setClickedEvent={this.props.setClickedEvent}
+                                                          mobileScreen={this.props.mobileScreen}
                     />}/>
                     <Route path='/events' render={()=><Events user = {this.props.user}
                                                               auth = {this.props.auth}
@@ -38,6 +44,7 @@ class Main extends Component {
                                                               setUserEvents={this.props.setUserEvents}
                                                               callAllEvents={this.props.callAllEvents}
                                                               setClickedEvent={this.props.setClickedEvent}
+                                                              mobileScreen={this.props.mobileScreen}
 
                     />}/>
                     <Route path='/event_detail' render={()=><EventDetail user = {this.props.user}
@@ -45,6 +52,7 @@ class Main extends Component {
                                                                          events={this.props.events}
                                                                          callAllEvents={this.props.callAllEvents}
                                                                          selectedEventId={this.props.selectedEventId}
+                                                                         mobileScreen={this.props.mobileScreen}
                     />}/>
                 </Switch>
             </main>

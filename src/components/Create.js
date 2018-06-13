@@ -76,7 +76,7 @@ class Create extends Component {
             return <Redirect to='/'/>
         }
         let calendarWidth, calendarHeigh = 0;
-        if (window.innerWidth > 700){
+        if (!this.props.mobileScreen){
             calendarWidth = 400;
             calendarHeigh = 230;
         }

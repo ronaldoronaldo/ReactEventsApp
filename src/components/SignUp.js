@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 class SignUp extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {email: '', password: '', first: '', last: ''};
+    this.state = {email: '', password: '', first: '', last: '', loading: false, signed: false};
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
@@ -34,7 +34,9 @@ class SignUp extends Component {
   }
 
   handleSubmit(e) {
-
+    this.setState({
+      loading: true
+    });
     fetch('https://testproject-api-v2.strv.com/users', {
       method: 'POST',
       headers: {
@@ -53,22 +55,29 @@ class SignUp extends Component {
           if(result.error){
             console.log('bugou');
             swal("Ops!", "Something went wrong, try again later  ):", "error");
+            this.setState({
+              loading: false
+            });
           }
           else{
-            swal("Success!", "Your User was created!", "success")
+            swal("Success!", "Your User was created!", "success");
+            this.setState({
+              loading: false, signed: true
+            });
           }
-
         });
-
     })
-
   }
 
   render() {
     let refresh = localStorage.getItem("refresh");
-    if (refresh) {
+    if (refresh || this.state.signed) {
+      this.setState({
+        signed: false
+      });
       return <Redirect to='/events'/>
-    }if (window.innerWidth < 700){
+    }
+    if (this.props.mobileScreen){
       return (
         <div>
             <div className="container login-box-mobile">

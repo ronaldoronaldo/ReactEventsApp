@@ -76,7 +76,7 @@ class Login extends Component {
       loading = <Loading/>
     }
 
-    if (window.innerWidth < 700){
+    if (this.props.mobileScreen){
       return (
         <div>
             <div className="container login-box-mobile">

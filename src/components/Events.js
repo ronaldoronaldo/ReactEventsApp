@@ -130,7 +130,7 @@ class Events extends Component {
                 }
             });
             let barsIcon = null;
-            if (window.innerWidth > 700){
+            if (!this.props.mobileScreen){
                 barsIcon = <div className="display-options">
                     <i className="fa fa-th" onClick={this.handleDisplayChange.bind(this, 'grid')}/>
                     <i className="fa fa-bars" onClick={this.handleDisplayChange.bind(this, 'list')}/>
